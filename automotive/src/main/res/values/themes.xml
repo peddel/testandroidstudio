@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Theme.CanReaderApp" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+
+</resources>

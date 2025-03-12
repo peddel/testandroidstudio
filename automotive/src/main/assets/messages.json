@@ -1,0 +1,746 @@
+{
+    "BAU1": {
+        "id": 486305968,
+        "length": 8,
+        "signals": {
+            "BAU_Type": {
+                "start_bit": 0,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "1": "lifting unit (LU)",
+                    "0": "not permitted value"
+                }
+            },
+            "BAU_Subtype_Categories": {
+                "start_bit": 8,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "2": "Tail-ilft-unit (TLU)",
+                    "1": "Vehicle crane unit (VMCU)",
+                    "0": "not used"
+                }
+            },
+            "BAU_Subtype_Class": {
+                "start_bit": 16,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "1": "Parallel arm lift",
+                    "0": "not used"
+                }
+            },
+            "BAU_SubpartMode": {
+                "start_bit": 24,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "RemainingOperatingHours": {
+                "start_bit": 32,
+                "length": 32,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 4294967295,
+                "unit": "h",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            }
+        }
+    },
+    "BAU3": {
+        "id": 486306480,
+        "length": 8,
+        "signals": {
+            "BAU_Subpart": {
+                "start_bit": 0,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "2": "Second tail-lift platform",
+                    "1": "Single/First tail-lift platform",
+                    "0": "entire BAU"
+                }
+            },
+            "BAU_SubpartMode": {
+                "start_bit": 8,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "OperatingHours": {
+                "start_bit": 16,
+                "length": 32,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 4294967295,
+                "unit": "h",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            }
+        }
+    },
+    "BAU4": {
+        "id": 486306736,
+        "length": 8,
+        "signals": {
+            "BAU_Subpart": {
+                "start_bit": 0,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "2": "Second tail-lift platform",
+                    "1": "Single/First tail-lift platform",
+                    "0": "entire BAU"
+                }
+            },
+            "BAU_SubpartMode": {
+                "start_bit": 8,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "OperatingCycles": {
+                "start_bit": 16,
+                "length": 32,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 4294967295,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            }
+        }
+    },
+    "BAU5": {
+        "id": 486306992,
+        "length": 8,
+        "signals": {
+            "BAU_Subpart": {
+                "start_bit": 0,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "2": "Second tail-lift platform",
+                    "1": "Single/First tail-lift platform",
+                    "0": "entire BAU"
+                }
+            },
+            "BAU_SubpartMode": {
+                "start_bit": 8,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "ResettableOperatingHours": {
+                "start_bit": 16,
+                "length": 32,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 4294967295,
+                "unit": "h",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            }
+        }
+    },
+    "BAU6": {
+        "id": 486307248,
+        "length": 8,
+        "signals": {
+            "BAU_Subpart": {
+                "start_bit": 0,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "2": "Second tail-lift platform",
+                    "1": "Single/First tail-lift platform",
+                    "0": "entire BAU"
+                }
+            },
+            "BAU_SubpartMode": {
+                "start_bit": 8,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "ResettableOperatingCycles": {
+                "start_bit": 16,
+                "length": 32,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 4294967295,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            }
+        }
+    },
+    "BAU7": {
+        "id": 486307504,
+        "length": 4,
+        "signals": {
+            "BAU_Subpart": {
+                "start_bit": 0,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "2": "Second tail-lift platform",
+                    "1": "Single/First tail-lift platform",
+                    "0": "entire BAU"
+                }
+            },
+            "Status": {
+                "start_bit": 8,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "6": "Limp home mode",
+                    "5": "emergency mode",
+                    "4": "Remote mode",
+                    "3": "Set-Up mode",
+                    "2": "In automatic mode",
+                    "1": "In manual mode",
+                    "0": "Application not active"
+                }
+            },
+            "EnableStatus_GeneralFunction": {
+                "start_bit": 16,
+                "length": 2,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "3": "Not available",
+                    "2": "Error",
+                    "1": "Enabled",
+                    "0": "Disabled"
+                }
+            },
+            "EnableStatus_TimeWindow": {
+                "start_bit": 18,
+                "length": 2,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "3": "Not available",
+                    "2": "Error",
+                    "1": "Enabled",
+                    "0": "Disabled"
+                }
+            },
+            "EnableStatus_Geofencing": {
+                "start_bit": 20,
+                "length": 2,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "3": "Not available",
+                    "2": "Error",
+                    "1": "Enabled",
+                    "0": "Disabled"
+                }
+            },
+            "MovingStatus": {
+                "start_bit": 24,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "6": "Movement_DRIVE_OUT",
+                    "5": "Movement_DRIVE_IN",
+                    "4": "Movement_CLOSE",
+                    "3": "Movement_OPEN",
+                    "2": "Movement_DOWN",
+                    "1": "Movement_UP",
+                    "0": "no Movement "
+                }
+            }
+        }
+    },
+    "BAU8": {
+        "id": 486307760,
+        "length": 8,
+        "signals": {
+            "BAU_Subpart": {
+                "start_bit": 0,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "2": "Second tail-lift platform",
+                    "1": "Single/First tail-lift platform",
+                    "0": "entire BAU"
+                }
+            },
+            "MountingLocation": {
+                "start_bit": 8,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "9": "Side Rear",
+                    "8": "Side Centre",
+                    "7": "Side Front",
+                    "6": "Rear Right",
+                    "5": "Rear Centre",
+                    "4": "Rear Left",
+                    "3": "Front Right",
+                    "2": "Front Centre",
+                    "1": "Front left",
+                    "0": "Unknown"
+                }
+            }
+        }
+    },
+    "BAU10": {
+        "id": 486309296,
+        "length": 8,
+        "signals": {
+            "BAU_Type": {
+                "start_bit": 0,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "1": "lifting unit (LU)",
+                    "0": "not permitted value"
+                }
+            },
+            "BAU_Subpart": {
+                "start_bit": 8,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "2": "Second tail-lift platform",
+                    "1": "Single/First tail-lift platform",
+                    "0": "entire BAU"
+                }
+            },
+            "NextMaintenanceDay": {
+                "start_bit": 16,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": "Day",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "NextMaintenanceMonth": {
+                "start_bit": 24,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": "Month",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "NextMaintenanceYear": {
+                "start_bit": 32,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": "Year",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            }
+        }
+    },
+    "LU1": {
+        "id": 486310320,
+        "length": 8,
+        "signals": {
+            "BAU_Subpart": {
+                "start_bit": 0,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "2": "Second tail-lift platform",
+                    "1": "Single/First tail-lift platform",
+                    "0": "entire BAU"
+                }
+            },
+            "ChainEmergencyStopStatus": {
+                "start_bit": 8,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "TransportPositionStatus": {
+                "start_bit": 16,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            }
+        }
+    },
+    "TLU1": {
+        "id": 486310576,
+        "length": 8,
+        "signals": {
+            "TailLiftPosition": {
+                "start_bit": 0,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "14": "Moveable RUPD driving position",
+                    "13": "Moveable RUPD driving position",
+                    "12": "Horizontal position 3",
+                    "11": "Horizontal position 2",
+                    "10": "Horizontal position 1",
+                    "9": "Working Position (Horizontal)",
+                    "8": "Stowed Position (Horizontal)",
+                    "7": "Between height and ground",
+                    "6": "Ground (Vertical)",
+                    "5": "Floor Bed Height (Vertical)",
+                    "4": "Platform Open",
+                    "3": "Platform Closed",
+                    "2": "Working Position",
+                    "1": "Driving Position",
+                    "0": "Unknown"
+                }
+            },
+            "TailLiftMovement": {
+                "start_bit": 8,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "6": "Movement_DRIVE_OUT",
+                    "5": "Movement_DRIVE_IN",
+                    "4": "Movement_CLOSE",
+                    "3": "Movement_OPEN",
+                    "2": "Movement_DOWN",
+                    "1": "Movement_UP",
+                    "0": "no Movement "
+                }
+            },
+            "TailLift_On_Off": {
+                "start_bit": 16,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "2": "Error",
+                    "1": "Supply Voltage on",
+                    "0": "Supply voltage off"
+                }
+            }
+        }
+    },
+    "ECU_PWR": {
+        "id": 486308272,
+        "length": 8,
+        "signals": {
+            "ECU_InputVoltage": {
+                "start_bit": 0,
+                "length": 16,
+                "factor": 0.05,
+                "offset": 0,
+                "min": null,
+                "max": null,
+                "unit": "V",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "HostingVehicleType": {
+                "start_bit": 16,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": null,
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": {
+                    "4": "dolly",
+                    "3": "semitrailer",
+                    "2": "trailer",
+                    "1": "truck"
+                }
+            }
+        }
+    },
+    "TD": {
+        "id": 486467248,
+        "length": 8,
+        "signals": {
+            "Seconds": {
+                "start_bit": 0,
+                "length": 8,
+                "factor": 0.25,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": "s",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "Minutes": {
+                "start_bit": 8,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": "min",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "Hours": {
+                "start_bit": 16,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": "hour",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "Month": {
+                "start_bit": 24,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": "months",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "Day": {
+                "start_bit": 32,
+                "length": 8,
+                "factor": 0.25,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": "days",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "Year": {
+                "start_bit": 40,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": "years",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "LocalMinuteOffset": {
+                "start_bit": 48,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": "min",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            },
+            "LocalHourOffset": {
+                "start_bit": 56,
+                "length": 8,
+                "factor": 1,
+                "offset": 0,
+                "min": 0,
+                "max": 255,
+                "unit": "hour",
+                "is_signed": false,
+                "is_multiplexer": false,
+                "value_table": null
+            }
+        }
+    }
+}

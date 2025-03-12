@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CanReaderApp</string>
+    <string name="start_can_communication">Start CAN Communication</string>
+    <string name="can_data_will_appear_here">CAN Data will appear here</string>
+    <string name="send">Send</string>
+    <string name="can_message_receiver">CAN Message Receiver</string>
+    <string name="press_connect_to_receive_can_messages">Press Connect to Receive CAN Messages</string>
+    <string name="connect_to_can_server">Connect to CAN Server</string>
+    <string name="waiting_for_can_data">Waiting for CAN data...</string>
+    <string name="waiting_for_json">Waiting for JSON...</string>
+</resources>
