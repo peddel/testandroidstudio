@@ -3,22 +3,18 @@ package com.example.canreaderapp;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.gson.Gson;
-
+import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.net.Socket;
 
 public class MainActivity extends AppCompatActivity {
-
-    private static final String SERVER_IP = "10.4.163.157"; // Replace with your server's IP address
+    private static final String SERVER_IP = "10.4.163.157"; // Change to your server's IP
     private static final int SERVER_PORT = 5000;
-
     private TextView jsonTextView;
 
     @Override
@@ -28,72 +24,51 @@ public class MainActivity extends AppCompatActivity {
 
         jsonTextView = findViewById(R.id.jsonTextView);
 
-        // Start the background task to connect to the server and fetch the JSON
-        new JsonReceiverTask().execute();
+        // Start receiving data in the background
+        new ReceiveJsonTask().execute();
     }
 
-    private class JsonReceiverTask extends AsyncTask<Void, Void, String> {
-
+    private class ReceiveJsonTask extends AsyncTask<Void, Void, String> {
         @Override
         protected String doInBackground(Void... voids) {
-            try {
-                // Connect to the server via TCP
-                Socket socket = new Socket(SERVER_IP, SERVER_PORT);
-                BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                StringBuilder jsonResponse = new StringBuilder();
+            StringBuilder receivedJson = new StringBuilder();
+
+            try (Socket socket = new Socket(SERVER_IP, SERVER_PORT);
+                 BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
 
                 String line;
                 while ((line = reader.readLine()) != null) {
-                    jsonResponse.append(line);
+                    receivedJson.append(line);
                 }
 
-                // Close the socket and the reader
-                socket.close();
-                reader.close();
+                Log.d("JSON_RECEIVED", "Received: " + receivedJson.toString());
 
-                return jsonResponse.toString();
             } catch (Exception e) {
-                e.printStackTrace();
-                return null;
+                Log.e("ERROR", "Error receiving JSON", e);
             }
+            return receivedJson.toString();
         }
 
         @Override
-        protected void onPostExecute(String jsonResponse) {
-            if (jsonResponse != null) {
-                // Parse the JSON response and display it
-                Gson gson = new Gson();
+        protected void onPostExecute(String json) {
+            if (!json.isEmpty()) {
                 try {
-                    // Assume the JSON is an object, modify this as needed
-                    MyJsonData data = gson.fromJson(jsonResponse, MyJsonData.class);
-
-                    // Update the UI with the parsed data
-                    jsonTextView.setText(data.toString());
+                    // Parse the received JSON string
+                    JSONObject jsonObject = new JSONObject(json);
+                    // Display the JSON object
+                    jsonTextView.setText(jsonObject.toString(4));  // Pretty print JSON with indentation
                 } catch (Exception e) {
-                    Toast.makeText(MainActivity.this, "Error parsing JSON", Toast.LENGTH_SHORT).show();
+                    Log.e("ERROR", "Error parsing JSON", e);
+                    jsonTextView.setText("Failed to parse JSON.");
                 }
             } else {
-                Toast.makeText(MainActivity.this, "Failed to connect or receive data", Toast.LENGTH_SHORT).show();
+                jsonTextView.setText("Failed to receive JSON.");
             }
-        }
-    }
-
-    // Define a simple class to match the structure of your JSON data
-    public class MyJsonData {
-        private String can_messages;
-
-        // Getters and setters
-        public String getCan_messages() {
-            return can_messages;
-        }
-
-        public void setCan_messages(String can_messages) {
-            this.can_messages = can_messages;
-        }
-
-        @Override
-        public String toString() {
-            return "Received JSON: " + can_messages;
         }
     }
 }
+
+
+
+
+

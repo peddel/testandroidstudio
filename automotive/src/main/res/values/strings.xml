@@ -8,4 +8,8 @@
     <string name="connect_to_can_server">Connect to CAN Server</string>
     <string name="waiting_for_can_data">Waiting for CAN data...</string>
     <string name="waiting_for_json">Waiting for JSON...</string>
+    <string name="waiting_for_json_data">Waiting for JSON data...</string>
+    <string name="waiting_for_json_dataaasaasaasa">Waiting for JSON data...</string>
+    <string name="a">Waiting for JSON data...</string>
+    <string name="as">Waiting for JSON data...</string>
 </resources>
